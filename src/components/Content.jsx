@@ -126,7 +126,7 @@ const Content = () => {
         setVisibleElements((prev) => prev + 4);
     }
     return (
-        <div className="max-w-[836px] mt-[20px] w-full relative z-[1] flex justify-center m-auto flex-col  items-center">
+        <div className="max-w-[836px] pb-[50px] mt-[20px] w-full relative z-[1] flex justify-center m-auto flex-col  items-center">
 <div className="w-full items-center flex justify-end gap-[20px] mr-[20px] 900:mr-0">
     <div className='cursor-pointer' onClick={() => setFilterd('group')}>
     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
@@ -143,7 +143,7 @@ const Content = () => {
 </svg>
 </div>
 </div>
-        <div className='flex gap-[8px] flex-wrap justify-center mt-[25px]  '>
+        <div className={`flex gap-[8px] ${filterd === 'list' ? 'flex-col w-full' : 'flex-wrap justify-center' }   mt-[25px]  `}>
             {
                 data.slice(0, visibleElements).map((item)=>(
                   <ContentCard item={item} filterd={filterd}/>

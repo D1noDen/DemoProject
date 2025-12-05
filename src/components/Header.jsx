@@ -9,7 +9,7 @@ import { useStore } from '../store/store';
 const Header = () => {
   const {startDate ,endDate , setStartDate, setEndDate} = useStore();
   const ExampleCustomInput = forwardRef(({ value, onClick, clearData , placeholderText }, ref) => <button type="button" className={'w-[162px] flex h-[28px] border pl-1 justify-between  rounded-[4px] border-[#DEDEDE]'} onClick={onClick} ref={ref}>
-    {value || placeholderText}
+   <span className='text-[#636264] font-roboto text-[13px] flex items-center'> {value || placeholderText}</span>
     <div className='flex '>
         {value && <div onClick={clearData} className='bg-[#EBEBEB] w-[24px] h-full flex items-center justify-center'>
             <img src={plus} alt="plus" className=''/>
@@ -32,21 +32,21 @@ const Header = () => {
                 </div>
                 <div>
                     <div className='flex items-center gap-[10px] xl:gap-[30px] flex-col xl:flex-row '>
-                        <span className='text-[24px]'>monblanproject</span>
+                        <span className='text-[24px] font-montserrat'>monblanproject</span>
                         <div className='border-[#3D8EDA] border px-[10px]'>
-                            <span className='text-[13px] text-[#3D8EDA]'>Start on { startDate ? moment(startDate).format('DD-MM-YYYY') : '' }</span>
+                            <span className='text-[13px] font-roboto text-[#3D8EDA]'>Start on { startDate ? moment(startDate).format('DD-MM-YYYY') : '' }</span>
                         </div>
                         
                     </div>
                     <div className='flex gap-[30px] mt-[16px] '>
                             
-                                <span><b>870</b> posts</span>
-                                <span><b>1.2k</b> followers</span>
-                                <span><b>345</b> following</span>
+                                <span className='text-[14px] font-roboto'><b>870</b> posts</span>
+                                <span className='text-[14px] font-roboto'><b>1.2k</b> followers</span>
+                                <span className='text-[14px] font-roboto'><b>345</b> following</span>
                         </div>
                         <div className='flex gap-[5px] xl:gap-[30px] mt-[20px] flex flex-col xl:flex-row items-center'>
                             <div className='gap-[10px] flex flex-col xl:flex-row'>
-                                <span className='text-[16px] text-black'>Date</span>
+                                <span className='text-[16px] text-black font-roboto'>Date</span>
                              <DatePicker
                               selected={startDate}
                              onChange={(date) => setStartDate(date)}

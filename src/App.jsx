@@ -8,7 +8,7 @@ function App() {
 
 
   return (
-    <div className='relative h-screen w-full'>
+    <div className='relative h-screen w-full '>
       <img src={VectorOne} alt="Vector One" className='absolute' />
       <Header/>
       <Content/>
