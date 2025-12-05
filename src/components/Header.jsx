@@ -49,6 +49,7 @@ const Header = () => {
                                 <span className='text-[16px] text-black font-roboto'>Date</span>
                              <DatePicker
                               selected={startDate}
+                                maxDate={endDate}
                              onChange={(date) => setStartDate(date)}
                               dateFormat="dd_MM_yyyy"
                             placeholderText="from"
@@ -58,6 +59,7 @@ const Header = () => {
                             </div>
       <DatePicker
                               selected={endDate}
+                              minDate={startDate}
                              onChange={(date) => setEndDate(date)}
                               dateFormat="dd_MM_yyyy"
                             placeholderText="from"

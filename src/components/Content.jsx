@@ -145,9 +145,9 @@ const Content = () => {
 </div>
         <div className={`flex gap-[8px] ${filterd === 'list' ? 'flex-col w-full' : 'flex-wrap justify-center' }   mt-[25px]  `}>
             {
-                data.slice(0, visibleElements).map((item)=>(
+                data.length > 0 ? data.slice(0, visibleElements).map((item)=>(
                   <ContentCard item={item} filterd={filterd}/>
-                ))
+                )) : <div className='text-center w-full text-[18px] font-roboto'>No data available for the selected date range.</div>
             }
         </div>
        
