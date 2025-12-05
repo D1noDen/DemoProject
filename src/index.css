@@ -6,3 +6,14 @@
 
 
 
+@theme{
+  --breakpoint-400: 450px;
+  --breakpoint-300: 300px;
+  --breakpoint-900: 900px;
+}
+  
+
+
+body {
+  background: #E5E5E5;
+}

@@ -127,7 +127,7 @@ const Content = () => {
     }
     return (
         <div className="max-w-[836px] mt-[20px] w-full relative z-[1] flex justify-center m-auto flex-col  items-center">
-<div className="w-full items-center flex justify-end gap-[20px]">
+<div className="w-full items-center flex justify-end gap-[20px] mr-[20px] 900:mr-0">
     <div className='cursor-pointer' onClick={() => setFilterd('group')}>
     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
 <path fill="none" stroke={filterd === 'group' ? "#3D8EDA" :"#C8C8C8"} stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 4h2v2H4zm0 14h2v2H4zM18 4h2v2h-2zm0 7h2v2h-2zm-7 0h2v2h-2zm-7 0h2v2H4zm7-7h2v2h-2zm0 14h2v2h-2zm7 0h2v2h-2z"/></svg>
@@ -143,7 +143,7 @@ const Content = () => {
 </svg>
 </div>
 </div>
-        <div className='flex gap-[8px] flex-wrap mt-[25px]  '>
+        <div className='flex gap-[8px] flex-wrap justify-center mt-[25px]  '>
             {
                 data.slice(0, visibleElements).map((item)=>(
                   <ContentCard item={item} filterd={filterd}/>

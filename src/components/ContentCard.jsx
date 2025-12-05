@@ -1,6 +1,6 @@
 const ContentCard = ({item , filterd}) => {
     return(
-      <div className={`${filterd === 'list' ? 'flex w-full items-center gap-3' : "flex flex-col w-[203px]"} overflow-hidden`}>
+      <div className={` bg-white  ${filterd === 'list' ? 'flex px-2  900:p-0 w-full items-center gap-3' : "flex flex-col w-[203px]"} overflow-hidden`}>
     <img 
         src={item.photo} 
         alt={item.title} 
@@ -8,7 +8,7 @@ const ContentCard = ({item , filterd}) => {
     />
     
     {filterd === 'list' ? (
-        <div className='flex-1 flex items-center justify-between'>
+        <div className='flex-1 flex items-center justify-around  flex-col gap-[2px] 400:flex-row 400:gap-0 '>
             <div className='flex flex-col gap-2'>
                 <span className='text-[16px] font-semibold'>{item.title}</span>
                 <div className='flex gap-4'>

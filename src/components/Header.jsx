@@ -26,12 +26,12 @@ const Header = () => {
     setEndDate(null);
   }
     return (
-        <div className="h-[172px] relative z-[2] w-full bg-white/75 shadow-[0px_4px_24px_rgba(0,0,0,0.12)]  flex items-center gap-[100px] justify-center">
+        <div className=" h-[380px] xl:h-[172px] relative z-[2] flex-col w-full bg-white/75 shadow-[0px_4px_24px_rgba(0,0,0,0.12)]  flex items-center xl:flex-row xl:gap-[100px] justify-center">
                 <div className=''>
-                    <img src={Logo} alt="Logo" className=' ml-10 pt-5'/>
+                    <img src={Logo} alt="Logo" className=' w-[100px] h-[100px]  xl:w-[138px] xl:h-[138px] ml-10 pt-5'/>
                 </div>
                 <div>
-                    <div className='flex items-center gap-[30px] '>
+                    <div className='flex items-center gap-[10px] xl:gap-[30px] flex-col xl:flex-row '>
                         <span className='text-[24px]'>monblanproject</span>
                         <div className='border-[#3D8EDA] border px-[10px]'>
                             <span className='text-[13px] text-[#3D8EDA]'>Start on { startDate ? moment(startDate).format('DD-MM-YYYY') : '' }</span>
@@ -44,8 +44,8 @@ const Header = () => {
                                 <span><b>1.2k</b> followers</span>
                                 <span><b>345</b> following</span>
                         </div>
-                        <div className='flex gap-[24px] mt-[20px]'>
-                            <div className='gap-[10px] flex '>
+                        <div className='flex gap-[5px] xl:gap-[30px] mt-[20px] flex flex-col xl:flex-row items-center'>
+                            <div className='gap-[10px] flex flex-col xl:flex-row'>
                                 <span className='text-[16px] text-black'>Date</span>
                              <DatePicker
                               selected={startDate}
