@@ -5,9 +5,9 @@ import calendar from '../assets/calendar.png'
 import { useState , forwardRef } from 'react';
 import "react-datepicker/dist/react-datepicker.css";
 import moment from 'moment';
+import { useStore } from '../store/store';
 const Header = () => {
-  const [startDate, setStartDate] = useState(null);
-  const [endDate, setEndDate] = useState(null);
+  const {startDate ,endDate , setStartDate, setEndDate} = useStore();
   const ExampleCustomInput = forwardRef(({ value, onClick, clearData , placeholderText }, ref) => <button type="button" className={'w-[162px] flex h-[28px] border pl-1 justify-between  rounded-[4px] border-[#DEDEDE]'} onClick={onClick} ref={ref}>
     {value || placeholderText}
     <div className='flex '>
@@ -26,7 +26,7 @@ const Header = () => {
     setEndDate(null);
   }
     return (
-        <div className="h-[172px] w-full bg-white shadow-[0px_4px_24px_rgba(0,0,0,0.12)] opacity-75 flex items-center gap-[100px] justify-center">
+        <div className="h-[172px] relative z-[2] w-full bg-white/75 shadow-[0px_4px_24px_rgba(0,0,0,0.12)]  flex items-center gap-[100px] justify-center">
                 <div className=''>
                     <img src={Logo} alt="Logo" className=' ml-10 pt-5'/>
                 </div>
